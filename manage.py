@@ -20,3 +20,13 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+
+from django.core.wsgi import get_wsgi_application
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'your_project.settings')
+
+sys.setrecursionlimit(5000)
+
+application = get_wsgi_application()
